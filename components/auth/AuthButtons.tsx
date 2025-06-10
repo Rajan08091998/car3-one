@@ -25,11 +25,12 @@ export function AuthButtons({
   const [authMode, setAuthMode] = useState<'email' | 'phone' | null>(null);
   const [inputValue, setInputValue] = useState('');
 
-  const handleSubmit = (e: React.FormEvent, connectionId: string) => {
+  const handleSubmit = (e: React.FormEvent, connectionId: string, type:string='email') => {
     e.preventDefault();
 
     const baseUrl = `/api/auth/${isSignUp ? 'register' : 'login'}`;
-    const query = `?login_hint=${encodeURIComponent(inputValue)}&connection_id=${connectionId}`;
+    const loginHint = type === 'phone'? `phone:${inputValue}:in` : inputValue
+    const query = `?login_hint=${encodeURIComponent(loginHint)}&connection_id=${connectionId}`;
 
     router.push(baseUrl + query);
   };
@@ -86,7 +87,7 @@ export function AuthButtons({
         {authMode === 'phone' ? (
           <form
             onSubmit={(e) =>
-              handleSubmit(e, 'conn_0197343f45fff12621a5fac57d9f52a1')
+              handleSubmit(e, 'conn_0197343f45fff12621a5fac57d9f52a1','phone')
             }
             className="space-y-3"
           >
@@ -153,24 +154,6 @@ export function AuthButtons({
           <ArrowRight className="h-4 w-4 text-gray-400" />
         </Button>
 
-        {/* Toggle Links */}
-        {/* <div className="text-center text-sm text-gray-500 mt-6">
-          {isSignUp ? (
-            <>
-              Already have an account?{' '}
-              <LoginLink className="text-blue-600 hover:underline font-medium">
-                Sign in
-              </LoginLink>
-            </>
-          ) : (
-            <>
-              Don't have an account?{' '}
-              <RegisterLink className="text-blue-600 hover:underline font-medium">
-                Sign up
-              </RegisterLink>
-            </>
-          )}
-        </div> */}
       </CardContent>
     </Card>
   );
