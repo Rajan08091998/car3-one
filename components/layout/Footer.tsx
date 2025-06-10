@@ -9,7 +9,7 @@ export function AppFooter() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Car className="h-8 w-8 text-blue-400" />
-              <span className="text-2xl font-bold">Car3 ONE</span>
+              <span className="text-2xl font-bold">Car3.one</span>
             </div>
             <p className="text-gray-400">
               Revolutionizing the automotive industry with innovative technology and seamless user experiences.
@@ -48,7 +48,7 @@ export function AppFooter() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400">© {new Date().getFullYear()} Car3 ONE. All rights reserved.</p>
+          <p className="text-gray-400">© {new Date().getFullYear()} Car3.one. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>

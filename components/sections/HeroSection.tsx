@@ -26,7 +26,7 @@ export function HeroSection() {
                 <span className="text-blue-600"> Automotive</span>
               </h1>
               <p className="text-xl text-gray-600 mt-6 leading-relaxed">
-                Car3 ONE revolutionizes how you buy, sell, service, and experience automotive.
+                Car3.one revolutionizes how you buy, sell, service, and experience automotive.
                 One platform, infinite possibilities.
               </p>
             </div>
@@ -34,8 +34,8 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               {isAuthenticated ? (
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700" asChild>
-                  <a href="/dashboard">
-                    Go to Dashboard
+                  <a href="/Whats-your-car-worth">
+                    Go to Car Valuation
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
                 </Button>

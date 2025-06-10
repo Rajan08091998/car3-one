@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    serverActions: true,
+  },
   images: {
     domains: ['images.pexels.com'], // Add images.pexels.com here
   },
@@ -8,7 +11,7 @@ const nextConfig = {
     KINDE_POST_LOGOUT_REDIRECT_URL:
       process.env.KINDE_POST_LOGOUT_REDIRECT_URL ?? `https://${process.env.VERCEL_URL}`,
     KINDE_POST_LOGIN_REDIRECT_URL:
-      process.env.KINDE_POST_LOGIN_REDIRECT_URL ?? `https://${process.env.VERCEL_URL}/dashboard`
+      process.env.KINDE_POST_LOGIN_REDIRECT_URL ?? `https://${process.env.VERCEL_URL}/whats-your-car-worth`
   }
 };
 

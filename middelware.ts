@@ -8,6 +8,6 @@ export function middleware(req: NextRequest) {
 
 export const config = {
   matcher: [
-    '/dashboard(.*)', // Protect dashboard and its subroutes
+    '/whats-your-car-worth(.*)', // Protect WYCW and its subroutes
   ],
 };
