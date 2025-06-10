@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
-  output: "standalone",
+const nextConfig = {
+  images: {
+    domains: ['images.pexels.com'], // Add images.pexels.com here
+  },
 };
+
+module.exports = nextConfig;
