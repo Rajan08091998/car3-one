@@ -29,7 +29,7 @@ export function AuthButtons({
     e.preventDefault();
 
     const baseUrl = `/api/auth/${isSignUp ? 'register' : 'login'}`;
-    const loginHint = type === 'phone'? `phone:${inputValue}:in` : inputValue
+    const loginHint = type === 'phone'? `phone:+91${inputValue}:in` : inputValue
     const query = `?login_hint=${encodeURIComponent(loginHint)}&connection_id=${connectionId}`;
 
     router.push(baseUrl + query);
